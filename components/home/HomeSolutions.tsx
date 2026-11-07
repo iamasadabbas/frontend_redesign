@@ -62,18 +62,42 @@ const cards: Card[] = [
   },
 ];
 
-function CardIcon({ icon, first }: { icon: Card["icon"]; first?: boolean }) {
-  const cls = first ? "text-white" : "text-[#AE4D70]";
+function CardIcon({ icon }: { icon: Card["icon"] }) {
+  const cls = "text-[#AE4D70] transition-colors group-hover:text-white";
   const size = 22;
   switch (icon) {
     case "kasse":
       return (
-        <Image
-          src="/images/home/icon-kassesystem.svg"
-          alt=""
-          width={22}
-          height={22}
-        />
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cls}
+        >
+          <path
+            d="M3.66683 2.75H18.3335C19.346 2.75 20.1668 3.57081 20.1668 4.58333V13.75C20.1668 14.7625 19.346 15.5833 18.3335 15.5833H3.66683C2.65431 15.5833 1.8335 14.7625 1.8335 13.75V4.58333C1.8335 3.57081 2.65431 2.75 3.66683 2.75Z"
+            stroke="currentColor"
+            strokeWidth="1.83333"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.3335 19.25H14.6668"
+            stroke="currentColor"
+            strokeWidth="1.83333"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11 15.5835V19.2502"
+            stroke="currentColor"
+            strokeWidth="1.83333"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       );
     case "qr":
       return <QrCode size={size} className={cls} strokeWidth={1.8} />;
@@ -116,17 +140,11 @@ export default function HomeSolutions() {
             <Link
               key={c.title}
               href={c.href}
-              className={`group -ml-px -mt-px flex h-[300px] flex-col border border-[#EEE3E8] p-[32px] pb-[34px] ${
-                i === 0 ? "bg-[#FBF4F7]" : "bg-white"
-              }`}
+              className="group -ml-px -mt-px flex h-[300px] flex-col border border-[#EEE3E8] bg-white p-[32px] pb-[34px] transition-colors hover:bg-[#FBF4F7]"
             >
               <div className="flex items-start justify-between">
-                <span
-                  className={`flex h-[48px] w-[48px] items-center justify-center rounded-[12px] ${
-                    i === 0 ? "bg-[#AE4D70]" : "bg-[#F9EDF2]"
-                  }`}
-                >
-                  <CardIcon icon={c.icon} first={i === 0} />
+                <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[12px] bg-[#F9EDF2] transition-colors group-hover:bg-[#AE4D70]">
+                  <CardIcon icon={c.icon} />
                 </span>
                 <span className="flex items-center gap-3">
                   {c.badge && (

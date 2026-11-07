@@ -54,11 +54,11 @@ export default function PosFeatures() {
           {features.map(({ Icon, title, body }, i) => (
             <article
               key={title}
-              className={`p-[28px] ${
+              className={`group bg-white p-[28px] transition-colors hover:bg-[#FBF6F8] ${
                 i > 0 ? "border-t border-[#EEE3E8] sm:border-l sm:border-t-0" : ""
               } ${i >= 2 ? "border-t border-[#EEE3E8] sm:border-t lg:border-t-0" : ""}`}
             >
-              <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70]">
+              <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70] transition-colors group-hover:bg-[#AE4D70] group-hover:text-white">
                 <Icon size={22} />
               </span>
               <h3

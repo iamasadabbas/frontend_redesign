@@ -72,16 +72,11 @@ export default function AboutVisjon() {
             {cards.map((card, i) => (
               <div
                 key={card.num}
-                className={`p-[36px] ${card.tinted ? "bg-[#FBF6F8]" : "bg-white"} ${i % 2 === 0 ? "md:border-r md:border-[#EEE3E8]" : ""
+                className={`group bg-white p-[36px] transition-colors hover:bg-[#FBF6F8] ${i % 2 === 0 ? "md:border-r md:border-[#EEE3E8]" : ""
                   } ${i < 2 ? "border-b border-[#EEE3E8]" : ""}`}
               >
                 <div className="flex items-start justify-between">
-                  <span
-                    className={`flex h-[48px] w-[48px] items-center justify-center rounded-[8px] ${card.tinted
-                        ? "bg-[#AE4D70] text-white"
-                        : "bg-[#FBF6F8] text-[#AE4D70]"
-                      }`}
-                  >
+                  <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70] transition-colors group-hover:bg-[#AE4D70] group-hover:text-white">
                     <card.Icon size={22} />
                   </span>
                   <span

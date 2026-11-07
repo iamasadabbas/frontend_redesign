@@ -57,11 +57,11 @@ export default function BackofficeFeatures() {
             {cells.map(({ Icon, title }, i) => (
               <article
                 key={title}
-                className={`bg-white p-[32px] ${i % 4 !== 0 ? "lg:border-l lg:border-[#EEE3E8]" : ""
+                className={`group bg-white p-[32px] transition-colors hover:bg-[#FBF6F8] ${i % 4 !== 0 ? "lg:border-l lg:border-[#EEE3E8]" : ""
                   } ${i % 2 === 1 ? "sm:border-l sm:border-[#EEE3E8] lg:border-l" : ""} ${i >= 2 ? "border-t border-[#EEE3E8] sm:border-t lg:border-t-0" : ""
                   } ${i >= 4 ? "lg:border-t" : ""}`}
               >
-                <span className="flex h-[44px] w-[44px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70]">
+                <span className="flex h-[44px] w-[44px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70] transition-colors group-hover:bg-[#AE4D70] group-hover:text-white">
                   <Icon size={20} />
                 </span>
                 <h3

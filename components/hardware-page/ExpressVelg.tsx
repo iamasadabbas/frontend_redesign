@@ -45,11 +45,11 @@ export default function ExpressVelg() {
             {cards.map(({ Icon, title }, i) => (
               <article
                 key={title}
-                className={`border border-[#EEE3E8] bg-white p-[34px] ${i < 3 ? "lg:col-span-2" : "lg:col-span-3"
+                className={`group border border-[#EEE3E8] bg-white p-[34px] transition-colors hover:bg-[#FBF6F8] ${i < 3 ? "lg:col-span-2" : "lg:col-span-3"
                   }`}
               >
                 <div className="flex items-start justify-between">
-                  <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70]">
+                  <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70] transition-colors group-hover:bg-[#AE4D70] group-hover:text-white">
                     <Icon size={22} />
                   </span>
                   <span

@@ -56,22 +56,14 @@ export function Muligheter() {
           {muligheter.map(({ Icon, title, body }, i) => (
             <article
               key={title}
-              className={`p-[36px] ${
-                i === 0 ? "bg-[#FBF6F8]" : "bg-white"
-              } ${
+              className={`group bg-white p-[36px] transition-colors hover:bg-[#FBF6F8] ${
                 i > 0
                   ? "border-t border-[#EEE3E8] md:border-l md:border-t-0"
                   : ""
               }`}
             >
               <div className="flex items-start justify-between">
-                <span
-                  className={`flex h-[48px] w-[48px] items-center justify-center rounded-[8px] ${
-                    i === 0
-                      ? "bg-[#AE4D70] text-white"
-                      : "bg-[#FBF6F8] text-[#AE4D70]"
-                  }`}
-                >
+                <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70] transition-colors group-hover:bg-[#AE4D70] group-hover:text-white">
                   <Icon size={22} />
                 </span>
                 <span
