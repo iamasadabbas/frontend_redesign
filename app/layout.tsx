@@ -1,12 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
 import { exactBlock, cashSans } from "./fonts";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
-});
 
 import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
