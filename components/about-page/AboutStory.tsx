@@ -17,7 +17,7 @@ export default function AboutStory() {
   const { openModal } = useRegistrationModal();
 
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
       <div className="relative mx-auto max-w-[1280px] overflow-hidden border-x border-[#EEE3E8] bg-white px-5 pb-[94px] pt-[68px] sm:px-8 lg:px-[32px]">
         <div className="relative">
           <span className="inline-flex items-center gap-2 rounded-[6px] border border-[#EEE3E8] bg-white px-3 py-2">
@@ -25,7 +25,7 @@ export default function AboutStory() {
             <span
               className={`text-[10px] uppercase leading-[16px] tracking-[5px] text-[#AE4D70] ${SANS}`}
             >
-              Our story
+              Om oss
             </span>
           </span>
 

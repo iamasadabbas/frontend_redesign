@@ -43,7 +43,7 @@ export default function SignupPage() {
       <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-8">
         <div className="text-center mb-8">
           <Image
-            src="/images/betalia_logo.png"
+            src="/images/betalia_logo_burgundy.png"
             alt="Betalia"
             width={50}
             height={50}

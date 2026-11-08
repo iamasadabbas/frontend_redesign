@@ -34,7 +34,7 @@ const cards = [
 
 export default function DisplayFeatures() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
         <div className="mx-auto max-w-[1280px] border-x border-b border-[#EEE3E8] bg-white px-5 pb-[80px] pt-[56px] sm:px-8 lg:px-[32px]">
           <div className="grid grid-cols-1 border border-[#EEE3E8] md:grid-cols-2">
             {cards.map(({ Icon, title, body }, i) => (

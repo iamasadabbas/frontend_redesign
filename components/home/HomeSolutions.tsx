@@ -116,7 +116,7 @@ function CardIcon({ icon }: { icon: Card["icon"] }) {
  *  hairline grid (2 rows x 3), each card 300 tall, padding 32. */
 export default function HomeSolutions() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto max-w-[1280px] border-x border-t border-[#EEE3E8] bg-white px-5 pb-[104px] pt-[48px] sm:px-8 lg:px-[32px]">
         {/* Section head */}
         <div className="max-w-[640px]">
@@ -140,7 +140,7 @@ export default function HomeSolutions() {
             <Link
               key={c.title}
               href={c.href}
-              className="group -ml-px -mt-px flex h-[300px] flex-col border border-[#EEE3E8] bg-white p-[32px] pb-[34px] transition-colors hover:bg-[#FBF4F7]"
+              className="group -ml-px -mt-px flex min-h-[300px] flex-col border border-[#EEE3E8] bg-white p-[32px] pb-[34px] transition-colors hover:bg-[#FBF4F7]"
             >
               <div className="flex items-start justify-between">
                 <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[12px] bg-[#F9EDF2] transition-colors group-hover:bg-[#AE4D70]">
@@ -169,7 +169,7 @@ export default function HomeSolutions() {
                 {c.desc}
               </p>
               <span
-                className={`mt-auto flex items-center gap-[6px] text-[11px] uppercase leading-none tracking-[1.2px] text-[#AE4D70] ${MONO}`}
+                className={`mt-auto flex items-center gap-[6px] pt-5 text-[11px] uppercase leading-none tracking-[1.2px] text-[#AE4D70] ${MONO}`}
               >
                 Les mer
                 <ArrowUpRight size={12} />

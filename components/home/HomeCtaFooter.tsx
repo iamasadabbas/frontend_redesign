@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,6 +14,7 @@ import {
   Twitter,
 } from "lucide-react";
 import { useRegistrationModal } from "@/hooks/useRegistrationModal";
+import LegalModal, { type LegalTab } from "@/components/site/LegalModal";
 
 const MONO = "[font-family:var(--font-home-mono)]";
 const SANS = "[font-family:var(--font-home-sans)]";
@@ -101,104 +103,124 @@ const colLink = "text-[15px] leading-none text-white/70 hover:text-white";
  *  white 7.84%, columns with hairline separators, bottom bar. */
 export function HomeFooter() {
   const { openModal } = useRegistrationModal();
+  const [legalTab, setLegalTab] = useState<LegalTab | null>(null);
 
   return (
-    <footer className="bg-[#2A1328] px-0 lg:px-[80px]">
-      <div className="mx-auto max-w-[1280px] border-x border-white/[0.0784] px-5 sm:px-8 lg:px-[32px]">
-        {/* Columns */}
-        <div className="grid grid-cols-1 gap-10 pb-[56px] pt-[64px] md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-[390px_288px_266px_1fr] xl:gap-0">
-          {/* Brand */}
-          <div className="lg:pr-[48px]">
-            <div className="flex items-start gap-[48px] xl:ml-[36px]">
-              <Image
-                src="/images/betalia_vertical_logo.png"
-                alt="Betalia"
-                width={40}
-                height={143}
-                className="h-[124px] w-auto shrink-0 opacity-50"
-              />
-              <p
-                className={`self-end pb-[4px] text-center text-[20px] font-medium leading-[1.4] text-white/30 ${SANS}`}
-              >
-                <span className="block">Enkelt å bruke.</span>
-                <span className="block">Fullt av muligheter.</span>
-              </p>
+      <footer className="bg-[#2A1328] px-0 lg:px-8 xl:px-[80px]">
+        <div className="mx-auto max-w-[1280px] border-x border-white/[0.0784] px-5 sm:px-8 lg:px-[32px]">
+          {/* Columns */}
+          <div className="grid grid-cols-1 gap-10 pb-[56px] pt-[64px] md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-[390px_288px_266px_1fr] xl:gap-0">
+            {/* Brand */}
+            <div className="lg:pr-[48px]">
+              <div className="flex items-start gap-[48px] xl:ml-[36px]">
+                <Image
+                  src="/images/betalia_vertical_logo_burgundy.png"
+                  alt="Betalia"
+                  width={40}
+                  height={143}
+                  className="h-[124px] w-auto shrink-0"
+                />
+                <p
+                  className={`self-end pb-[4px] text-center text-[20px] font-medium leading-[1.4] text-white/30 ${SANS}`}
+                >
+                  <span className="block">Enkelt å bruke.</span>
+                  <span className="block">Fullt av muligheter.</span>
+                </p>
+              </div>
+              <div className="mt-[44px]">
+                <div className="flex gap-3">
+                  {[
+                    { Icon: Facebook, label: "Facebook" },
+                    { Icon: Twitter, label: "Twitter" },
+                    { Icon: Linkedin, label: "LinkedIn" },
+                    { Icon: Instagram, label: "Instagram" },
+                  ].map(({ Icon, label }) => (
+                    <span
+                      key={label}
+                      aria-label={label}
+                      className="flex h-[38px] w-[38px] items-center justify-center rounded-full border border-white/25 text-white/70"
+                    >
+                      <Icon size={15} />
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="mt-[44px]">
-              <div className="flex gap-3">
-                {[
-                  { Icon: Facebook, label: "Facebook" },
-                  { Icon: Twitter, label: "Twitter" },
-                  { Icon: Linkedin, label: "LinkedIn" },
-                  { Icon: Instagram, label: "Instagram" },
-                ].map(({ Icon, label }) => (
-                  <span
-                    key={label}
-                    aria-label={label}
-                    className="flex h-[38px] w-[38px] items-center justify-center rounded-full border border-white/25 text-white/70"
-                  >
-                    <Icon size={15} />
-                  </span>
-                ))}
+
+            {/* 01 Løsninger */}
+            <div className="xl:border-l xl:border-white/[0.0784] xl:pl-[48px]">
+              <p className={colLabel}>01 — Løsninger</p>
+              <ul className="mt-6 space-y-4">
+                <li><Link className={colLink} href="/hardware/cashier">Kasse</Link></li>
+                <li><Link className={colLink} href="/hardware/online-qr">Online &amp; QR bestilling</Link></li>
+                <li><Link className={colLink} href="/hardware/self-kiosk">Selvbetjent kasse</Link></li>
+                <li><Link className={colLink} href="/hardware/display">Kundedisplay</Link></li>
+                <li><Link className={colLink} href="/hardware/ksd">Kjøkkenskjerm (KDS)</Link></li>
+                <li><Link className={colLink} href="/hardware/back-office">Backoffice</Link></li>
+              </ul>
+            </div>
+
+            {/* 02 Betalia */}
+            <div className="xl:border-l xl:border-white/[0.0784] xl:pl-[48px]">
+              <p className={colLabel}>02 — Betalia</p>
+              <ul className="mt-6 space-y-4">
+                <li><Link className={colLink} href="/about">Om oss</Link></li>
+                <li><Link className={colLink} href="/contact">Support</Link></li>
+                <li><Link className={colLink} href="/hardware">Løsninger</Link></li>
+                <li><Link className={colLink} href="/vendor/login">Kundeportal</Link></li>
+              </ul>
+            </div>
+
+            {/* 03 Kontakt */}
+            <div className="xl:border-l xl:border-white/[0.0784] xl:pl-[48px]">
+              <p className={colLabel}>03 — Kontakt</p>
+              <ul className="mt-6 space-y-4">
+                <li>
+                  <button onClick={openModal} className={colLink}>
+                    Få et tilbud
+                  </button>
+                </li>
+                <li><Link className={colLink} href="/contact">Kontakt oss</Link></li>
+                <li className="text-[15px] leading-none text-white/70">Org nr: 937 988 710</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom bar */}
+            <div className="flex min-h-[63px] flex-wrap items-center justify-between gap-4 border-t border-white/[0.0784] py-4">
+              <p
+                className={`text-[11px] uppercase leading-none tracking-[1.2px] text-white/50 ${MONO}`}
+              >
+                © 2026 Betalia — Alle rettigheter forbeholdt
+              </p>
+              <div
+                className={`flex gap-8 text-[11px] uppercase leading-none tracking-[1.2px] text-white/50 ${MONO}`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setLegalTab("personvern")}
+                  className="uppercase transition-colors hover:text-white"
+                >
+                  Personvern
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLegalTab("cookies")}
+                  className="uppercase transition-colors hover:text-white"
+                >
+                  Cookies
+                </button>
+                <Link href="/" className="transition-colors hover:text-white">
+                  Betalia.no
+                </Link>
               </div>
             </div>
           </div>
-
-          {/* 01 Løsninger */}
-          <div className="xl:border-l xl:border-white/[0.0784] xl:pl-[48px]">
-            <p className={colLabel}>01 — Løsninger</p>
-            <ul className="mt-6 space-y-4">
-              <li><Link className={colLink} href="/hardware/cashier">Kasse</Link></li>
-              <li><Link className={colLink} href="/hardware/online-qr">Online &amp; QR bestilling</Link></li>
-              <li><Link className={colLink} href="/hardware/self-kiosk">Selvbetjent kasse</Link></li>
-              <li><Link className={colLink} href="/hardware/display">Kundedisplay</Link></li>
-              <li><Link className={colLink} href="/hardware/ksd">Kjøkkenskjerm (KDS)</Link></li>
-              <li><Link className={colLink} href="/hardware/back-office">Backoffice</Link></li>
-            </ul>
-          </div>
-
-          {/* 02 Betalia */}
-          <div className="xl:border-l xl:border-white/[0.0784] xl:pl-[48px]">
-            <p className={colLabel}>02 — Betalia</p>
-            <ul className="mt-6 space-y-4">
-              <li><Link className={colLink} href="/about">Om oss</Link></li>
-              <li><Link className={colLink} href="/contact">Support</Link></li>
-              <li><Link className={colLink} href="/hardware">Løsninger</Link></li>
-              <li><Link className={colLink} href="/vendor/login">Kundeportal</Link></li>
-            </ul>
-          </div>
-
-          {/* 03 Kontakt */}
-          <div className="xl:border-l xl:border-white/[0.0784] xl:pl-[48px]">
-            <p className={colLabel}>03 — Kontakt</p>
-            <ul className="mt-6 space-y-4">
-              <li>
-                <button onClick={openModal} className={colLink}>
-                  Få et tilbud
-                </button>
-              </li>
-              <li><Link className={colLink} href="/contact">Kontakt oss</Link></li>
-              <li className="text-[15px] leading-none text-white/70">Org nr: 937 988 710</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="flex h-[63px] flex-wrap items-center justify-between gap-4 border-t border-white/[0.0784]">
-          <p
-            className={`text-[11px] uppercase leading-none tracking-[1.2px] text-white/50 ${MONO}`}
-          >
-            © 2026 Betalia — Alle rettigheter forbeholdt
-          </p>
-          <div
-            className={`flex gap-8 text-[11px] uppercase leading-none tracking-[1.2px] text-white/50 ${MONO}`}
-          >
-            <span>Personvern</span>
-            <span>Cookies</span>
-            <span>Betalia.no</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+          <LegalModal
+            activeTab={legalTab}
+            onSelectTab={setLegalTab}
+            onClose={() => setLegalTab(null)}
+          />
+      </footer>
+      );
 }

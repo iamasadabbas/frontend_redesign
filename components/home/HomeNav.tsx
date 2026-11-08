@@ -33,15 +33,14 @@ export default function HomeNav({
 
   return (
     <header className="relative border-b border-[#EEE3E8] bg-white [font-family:var(--font-home-sans)]">
-      <div className="mx-auto flex h-[70px] max-w-[1440px] items-center px-5 sm:px-8 lg:px-[112px]">
+      <div className="mx-auto flex h-[70px] max-w-[1440px] items-center px-5 sm:px-8 lg:px-16 xl:px-[112px]">
         <Link href="/" className="shrink-0" aria-label="Betalia hjem">
           <Image
-            src="/images/home/logo-mark.png"
+            src="/images/home/logo-mark-burgundy.png"
             alt="Betalia"
             width={117}
             height={30}
             priority
-            className="opacity-80"
           />
         </Link>
 

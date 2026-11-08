@@ -34,7 +34,7 @@ const features: [string, string][] = [
 
 export default function KsdFeatures() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
         <div className="mx-auto max-w-[1280px] border-x border-b border-[#EEE3E8] bg-white px-5 pb-[104px] pt-[88px] sm:px-8 lg:px-[32px]">
           <p
             className={`text-[12px] uppercase leading-none tracking-[1.2px] text-[#AE4D70] ${MONO}`}
@@ -53,7 +53,7 @@ export default function KsdFeatures() {
             effektiv arbeidsflyt fra bestilling til servering.
           </p>
 
-          <div className="mt-[48px] grid grid-cols-1 items-start gap-[48px] lg:grid-cols-[1fr_560px]">
+          <div className="mt-[48px] grid grid-cols-1 items-start gap-[48px] lg:grid-cols-2 xl:grid-cols-[1fr_560px]">
             <div>
               {features.map(([title, body], i) => (
                 <div

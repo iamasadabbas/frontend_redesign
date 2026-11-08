@@ -16,7 +16,7 @@ export type FaqItem = { question: string; answer: string };
 export default function FaqCards({
   items,
   eyebrow = "— Ofte stilte spørsmål —",
-  defaultOpenIdx = 0,
+  defaultOpenIdx = -1,
   sectionClassName = "",
 }: {
   items: FaqItem[];

@@ -51,7 +51,7 @@ export default function AboutDark() {
   const [activeIdx, setActiveIdx] = useState(0);
 
   return (
-    <section className="bg-[#2A1328] px-0 lg:px-[80px]">
+    <section className="bg-[#2A1328] px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto max-w-[1280px] border-x border-white/[0.0784] px-5 py-[104px] sm:px-8 lg:px-[32px]">
         <h2
           className={`max-w-[680px] text-[36px] font-semibold leading-[1.12] tracking-[-1.6px] text-white sm:text-[42px] lg:text-[48px] ${SANS}`}

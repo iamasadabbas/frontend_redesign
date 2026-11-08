@@ -70,7 +70,7 @@ export default function LoginPage() {
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center rounded-lg text-white mb-4">
                 <Image
-                  src="/images/betalia_logo.png"
+                  src="/images/betalia_logo_burgundy.png"
                   alt="Betalia Logo"
                   width={160}
                   height={160}
@@ -121,13 +121,13 @@ export default function LoginPage() {
                     htmlFor="password"
                     className="text-sm font-medium"
                   >
-                    Password
+                    Passord
                   </Label>
 
                   <Input
                     id="password"
                     type="password"
-                    placeholder="Enter your password"
+                    placeholder="Skriv inn passordet ditt"
                     value={password}
                     onChange={(e) =>
                       setPassword(e.target.value)
@@ -150,7 +150,7 @@ export default function LoginPage() {
                   {isVendorAuthLoading ? (
                     <>
                       <Spinner className="w-4 h-4 mr-2" />
-                      Logging in...
+                      Logger inn...
                     </>
                   ) : (
                     "Logg inn"
@@ -209,7 +209,7 @@ export default function LoginPage() {
               mt-6
             "
             >
-              © 2026 Betalia. All rights reserved.
+              © 2026 Betalia — Alle rettigheter forbeholdt
             </p>
 
           </div>

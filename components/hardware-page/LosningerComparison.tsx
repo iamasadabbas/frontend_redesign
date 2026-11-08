@@ -26,10 +26,10 @@ const groups: {
   key: "payments" | "power" | "connectivity" | "bestFor";
   label: string;
 }[] = [
-  { key: "payments", label: "Accepted payments" },
-  { key: "power", label: "Power" },
-  { key: "connectivity", label: "Connectivity" },
-  { key: "bestFor", label: "Best for" },
+  { key: "payments", label: "Betalingsmetoder" },
+  { key: "power", label: "Strømforsyning / løsning" },
+  { key: "connectivity", label: "Tilkobling" },
+  { key: "bestFor", label: "Ideelt for" },
 ];
 
 export default function LosningerComparison() {
@@ -42,7 +42,7 @@ export default function LosningerComparison() {
     setIds((prev) => prev.map((old, i) => (i === col ? id : old)));
 
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto max-w-[1280px] border-x border-y border-[#EEE3E8] bg-white px-5 pb-[104px] pt-[88px] sm:px-8 lg:px-[32px]">
         <p
           className={`text-[12px] uppercase leading-none tracking-[1.2px] text-[#AE4D70] ${MONO}`}
@@ -105,23 +105,25 @@ export default function LosningerComparison() {
                 <p className="text-[15px] leading-[1.6] text-[#6E6168]">
                   {product.description}
                 </p>
-                {groups.map((group) => (
-                  <div
-                    key={group.key}
-                    className="mt-[28px] border-t border-[#EEE3E8] pt-[28px]"
-                  >
-                    <p
-                      className={`text-[11px] uppercase leading-none tracking-[2px] text-[#AE4D70] ${MONO}`}
+                {groups
+                  .filter((group) => product.specs[group.key].length > 0)
+                  .map((group) => (
+                    <div
+                      key={group.key}
+                      className="mt-[28px] border-t border-[#EEE3E8] pt-[28px]"
                     >
-                      {group.label}
-                    </p>
-                    <ul className="mt-3 space-y-[6px] text-[15px] leading-[1.5] text-[#1A1218]">
-                      {product.specs[group.key].map((item) => (
-                        <li key={item}>— {item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                      <p
+                        className={`text-[11px] uppercase leading-none tracking-[2px] text-[#AE4D70] ${MONO}`}
+                      >
+                        {group.label}
+                      </p>
+                      <ul className="mt-3 space-y-[6px] text-[15px] leading-[1.5] text-[#1A1218]">
+                        {product.specs[group.key].map((item) => (
+                          <li key={item}>— {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
               </div>
             </article>
           ))}

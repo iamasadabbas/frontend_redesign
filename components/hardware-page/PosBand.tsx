@@ -20,7 +20,7 @@ export default function PosBand() {
   const [activeIdx, setActiveIdx] = useState(0);
 
   return (
-    <section className="bg-[#2A1328] px-0 lg:px-[80px]">
+    <section className="bg-[#2A1328] px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto max-w-[1280px] border-x border-white/[0.0784] px-5 py-[88px] sm:px-8 lg:px-[32px]">
         <div className="flex h-auto flex-col md:h-[480px] md:flex-row">
           {photos.map((photo, i) => {

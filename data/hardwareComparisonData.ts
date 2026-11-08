@@ -1,160 +1,153 @@
 export const comparisonProducts = [
   {
     id: "cashier",
-    name: "Cashier",
+    name: "Betalia POS",
     image: "/images/hardware/comp-1.png",
     description:
-      "A complete point-of-sale solution for fast and efficient restaurant checkout.",
+      "En komplett kasseløsning som sikrer rask, enkel og effektiv betaling og betjening i restauranter og serveringssteder.",
 
     specs: {
       payments: [
-        "Tap",
-        "Chip",
-        "Mobile Wallets",
+        "Kort",
+        "Kontant",
+        "Gavekort",
+        "Bærebarterminal",
       ],
       power: [
-        "AC Powered",
+        "Strømtilkobling",
       ],
       connectivity: [
-        "Wi-Fi",
-        "Ethernet",
+        "Wi-Fi og Ethernet",
       ],
       bestFor: [
-        "Restaurant Checkout",
-        "Counter Service",
-        "High-volume Sales",
+        "Resturant",
+        "Bakeri",
+        "Kafé",
+        "Fastfood",
       ],
     },
   },
 
   {
     id: "online-qr",
-    name: "Online & QR Ordering",
+    name: "Online & QR",
     image: "/images/online-qr-ordering.webp",
     description:
-      "Allow customers to browse menus and order online or by scanning a QR code.",
+      "La kundene utforske menyen og bestille enkelt på nett eller ved å skanne en QR-kode.",
 
     specs: {
       payments: [
-        "Online Payments",
-        "Mobile Wallets",
+        "Kort",
+        "Betaling ved kassa / Betaling kontant ved henting",
+        "Gavekort",
       ],
       power: [
-        "Cloud Based",
+        "Skybasert løsning",
       ],
       connectivity: [
-        "Internet",
+        "Internett",
       ],
       bestFor: [
-        "QR Ordering",
-        "Online Orders",
-        "Contactless Dining",
+        "Bestilling via QR-kode",
+        "Nettbestillinger",
+        "Kontaktløs bestilling og servering",
       ],
     },
   },
 
   {
     id: "self-kiosk",
-    name: "Self Kiosk",
+    name: "Betalia Express",
     image: "/images/hardware/comp-3.png",
     description:
-      "Self-service ordering that reduces queues and improves customer experience.",
+      "En moderne selvbetjeningsløsning som reduserer køer, effektiviserer bestillingsprosessen og gir kundene en raskere og enklere handleopplevelse.",
 
     specs: {
       payments: [
-        "Tap",
-        "Chip",
-        "Mobile Wallets",
+        "Kort",
+        "Gavekort",
+        "Betaling ved kassa",
       ],
       power: [
-        "AC Powered",
+        "Strømtilkobling",
       ],
       connectivity: [
-        "Wi-Fi",
-        "Ethernet",
+        "Wi-Fi og Ethernet",
       ],
       bestFor: [
-        "Self Ordering",
-        "Quick Service",
-        "Fast Casual Restaurants",
+        "Selvbetjent bestilling",
+        "Rask og effektiv servering",
+        "Restauranter med rask og uformell servering",
       ],
     },
   },
 
   {
     id: "display",
-    name: "Customer Display",
+    name: "KundeDisplay",
     image: "/images/display-ordering.webp",
     description:
-      "A customer-facing display for transparent checkout and order confirmation.",
+      "Med Betalia Bestillingsstatusskjerm kan kundene enkelt følge statusen på bestillingen sin i sanntid, slik at de alltid vet når maten er klar for henting.",
 
     specs: {
       payments: [
-        "Display Only",
+        "Kun visning – ingen betalingsfunksjon",
       ],
       power: [
-        "USB Powered",
+        "Eget skjerm",
       ],
       connectivity: [
-        "USB-C",
-        "Ethernet",
+        "Eget skjerm",
       ],
       bestFor: [
-        "Order Review",
-        "Customer Checkout",
-        "Payment Confirmation",
+        "Visning og kontroll av bestillinger",
       ],
     },
   },
 
   {
     id: "ksd",
-    name: "Kitchen Display (KDS)",
+    name: "KjøkkenPluss",
     image: "/images/kds.webp",
     description:
-      "Digitally manage kitchen orders with real-time preparation tracking.",
+      "Administrer kjøkkenbestillinger digitalt, med sanntidsoversikt over ordrestatus og tilberedning. Løsningen gir bedre arbeidsflyt, færre feil og mer effektiv håndtering av bestillinger.",
 
     specs: {
       payments: [
-        "Not Applicable",
+        "Ikke relevant –",
       ],
       power: [
-        "AC Powered",
+        "Eget skjerm",
       ],
       connectivity: [
-        "Wi-Fi",
-        "Ethernet",
+        "Wi-Fi og Ethernet",
       ],
       bestFor: [
-        "Kitchen Workflow",
-        "Order Management",
-        "Preparation Tracking",
+        "Effektiv arbeidsflyt på kjøkkenet",
+        "Ordrehåndtering",
+        "Oppfølging av tilberedningsstatus",
       ],
     },
   },
 
   {
     id: "backoffice",
-    name: "Backoffice",
+    name: "BackOffice",
     image: "/images/backoffice/hero-dashboard.png",
     description:
-      "Manage inventory, reports, menus, staff, and multiple restaurant locations from one dashboard.",
+      "Få full kontroll over rapporter, menyer, ansatte og flere avdelinger og mye mer, samlet i ett oversiktlig administrasjonspanel.",
 
     specs: {
       payments: [
-        "Not Applicable",
+        "Ikke relevant",
       ],
       power: [
-        "Cloud Platform",
+        "Skybasert plattform",
       ],
       connectivity: [
-        "Internet",
+        "Internett",
       ],
-      bestFor: [
-        "Inventory",
-        "Reporting",
-        "Multi-location Management",
-      ],
+      bestFor: [] as string[],
     },
   },
 ];

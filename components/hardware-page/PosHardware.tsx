@@ -19,7 +19,7 @@ const items = [
 
 export default function PosHardware() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto max-w-[1280px] border-x border-[#EEE3E8] bg-[#FBF6F8] px-5 pb-[96px] sm:px-8 lg:px-[32px]">
         <p
           className={`text-[12px] uppercase leading-none tracking-[1.2px] text-[#AE4D70] ${MONO}`}
@@ -32,7 +32,7 @@ export default function PosHardware() {
           Betalia Hardware
         </h2>
 
-        <div className="mt-[32px] grid grid-cols-1 items-start gap-[40px] lg:grid-cols-[1fr_620px]">
+        <div className="mt-[32px] grid grid-cols-1 items-start gap-[40px] lg:grid-cols-2 xl:grid-cols-[1fr_620px]">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {items.map((item, i) => (
               <p

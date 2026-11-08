@@ -7,7 +7,7 @@ import FaqCards from "@/components/site/FaqCards";
  */
 const items = [
   {
-    question: "How quickly will someone contact me?",
+    question: "Hvor raskt blir jeg kontaktet?",
     answer:
       "Når rutineoppgavene automatiseres, får du mer tid til å utvikle virksomheten, styrke kundeforholdene og øke salget. Betalias mål er å være den foretrukne POS- og betalingsplattformen for norske virksomheter som ønsker en enklere, smartere og mer lønnsom hverdag.",
   },

@@ -41,21 +41,21 @@ export default function ForgotPasswordPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center mb-4">
-            <Image src="/images/betalia_logo.png" alt="Betalia Logo" width={160} height={160} />
+            <Image src="/images/betalia_logo_burgundy.png" alt="Betalia Logo" width={160} height={160} />
           </div>
         </div>
 
         <Card className="p-6 shadow-lg border-0">
           <h1 className="text-xl font-semibold mb-1">Glemt passord?</h1>
           <p className="text-sm text-slate-600 mb-4">
-            Enter your email and we will send you a link to reset your password.
+            Skriv inn e-postadressen din, så sender vi deg en lenke for å tilbakestille passordet.
           </p>
 
           {sent ? (
             <Alert className="mb-2">
               <CheckCircle2 className="h-4 w-4" />
               <AlertDescription>
-                If an account exists for that email, we have sent a password reset link. The link is valid for 30 minutes.
+                Hvis det finnes en konto for denne e-postadressen, har vi sendt en lenke for tilbakestilling av passord. Lenken er gyldig i 30 minutter.
               </AlertDescription>
             </Alert>
           ) : (
@@ -80,7 +80,7 @@ export default function ForgotPasswordPage() {
                   />
                 </div>
                 <Button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white" disabled={loading}>
-                  {loading ? (<><Spinner className="w-4 h-4 mr-2" />Sending...</>) : 'Send reset link'}
+                  {loading ? (<><Spinner className="w-4 h-4 mr-2" />Sender...</>) : 'Send tilbakestillingslenke'}
                 </Button>
               </form>
             </>
@@ -88,7 +88,7 @@ export default function ForgotPasswordPage() {
 
           <div className="mt-4 text-center">
             <Link href="/vendor/login" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
-              Back to login
+              Tilbake til innlogging
             </Link>
           </div>
         </Card>

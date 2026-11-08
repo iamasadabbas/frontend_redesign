@@ -32,15 +32,15 @@ const features = [
  *  Right: eyebrow + title + hairline-separated numbered list. */
 export default function HomeFeatures() {
   return (
-    <section className="px-0 lg:px-[80px]">
-      <div className="mx-auto flex max-w-[1280px] flex-col gap-[72px] border-x border-[#EEE3E8] bg-white px-5 py-[104px] sm:px-8 lg:flex-row lg:px-[32px]">
-        <div className="relative w-full shrink-0 overflow-hidden rounded-[6px] lg:w-[520px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
+      <div className="mx-auto flex max-w-[1280px] flex-col gap-12 border-x border-[#EEE3E8] bg-white px-5 py-[104px] sm:px-8 lg:flex-row lg:items-center lg:gap-[48px] lg:px-[32px] xl:gap-[72px]">
+        <div className="relative mx-auto w-full max-w-[520px] shrink-0 overflow-hidden rounded-[6px] lg:mx-0 lg:w-[420px] xl:w-[520px]">
           <Image
             src="/images/home/feature-visual.png"
             alt="Betalia betalingsterminal"
             width={520}
             height={657}
-            className="h-full w-full object-cover"
+            className="h-auto w-full object-cover"
           />
         </div>
 

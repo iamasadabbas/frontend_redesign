@@ -19,7 +19,7 @@ export default function HardwarePageHeader() {
       <header className="relative flex h-[80px] items-center bg-white px-4 pt-[9px]">
         <Link href="/" aria-label="Betalia" className="shrink-0">
           <Image
-            src="/images/betalia_logo.png"
+            src="/images/betalia_logo_burgundy.png"
             alt="Betalia"
             width={533}
             height={149}

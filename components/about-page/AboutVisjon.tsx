@@ -49,7 +49,7 @@ const cards = [
 
 export default function AboutVisjon() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
         <div className="mx-auto max-w-[1280px] border-x border-[#EEE3E8] bg-white px-5 pb-[105px] pt-[88px] sm:px-8 lg:px-[32px]">
           <p
             className={`text-[12px] uppercase leading-none tracking-[1.2px] text-[#AE4D70] ${MONO}`}
@@ -73,7 +73,7 @@ export default function AboutVisjon() {
               <div
                 key={card.num}
                 className={`group bg-white p-[36px] transition-colors hover:bg-[#FBF6F8] ${i % 2 === 0 ? "md:border-r md:border-[#EEE3E8]" : ""
-                  } ${i < 2 ? "border-b border-[#EEE3E8]" : ""}`}
+                  } ${i < 3 ? "border-b border-[#EEE3E8]" : ""} ${i === 2 ? "md:border-b-0" : ""}`}
               >
                 <div className="flex items-start justify-between">
                   <span className="flex h-[48px] w-[48px] items-center justify-center rounded-[8px] bg-[#FBF6F8] text-[#AE4D70] transition-colors group-hover:bg-[#AE4D70] group-hover:text-white">

@@ -20,7 +20,7 @@ export default function AboutHeader() {
       <div className="flex h-[80px] items-center px-6 lg:px-[48px]">
         <Link href="/" className="shrink-0" aria-label="Betalia hjem">
           <Image
-            src="/images/betalia_logo.webp"
+            src="/images/betalia_logo_burgundy.png"
             alt="Betalia"
             width={34}
             height={51}

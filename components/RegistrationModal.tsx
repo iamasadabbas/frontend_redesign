@@ -94,7 +94,7 @@ export default function RegistrationModal({
     return (
         <div
             onClick={onClose}
-            className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#2A1328]/60 p-4 backdrop-blur-sm font-sans"
+            className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#2A1328]/60 p-3 backdrop-blur-sm font-sans sm:p-5 md:p-6"
         >
             <div
                 onClick={(e) => e.stopPropagation()}
@@ -103,148 +103,148 @@ export default function RegistrationModal({
                 onWheel={(e) => {
                     e.stopPropagation();
                 }}
-                className="hide-scrollbar relative max-h-[94vh] w-full max-w-[1180px] overflow-y-auto"
+                className="hide-scrollbar relative max-h-[92vh] max-h-[92dvh] w-full max-w-[1180px] overflow-y-auto overscroll-contain [-webkit-overflow-scrolling:touch]"
             >
                 <form onSubmit={handleSubmit}>
-                    <div className="relative border border-[#EEE3E8] bg-white px-6 py-[48px] shadow-2xl md:px-[64px]">
-                        {/* CLOSE BUTTON */}
-                        <button
-                            type="button"
-                            onClick={onClose}
-                            aria-label="Lukk"
-                            className="absolute right-5 top-5 z-50 flex h-9 w-9 items-center justify-center rounded-full text-[#9A8C93] transition-colors hover:bg-[#FAF3F6] hover:text-[#1A1218]"
-                        >
-                            <X size={18} />
-                        </button>
+                        <div className="relative border border-[#EEE3E8] bg-white px-5 py-7 shadow-2xl sm:px-8 sm:py-10 md:px-[64px] md:py-[48px]">
+                            {/* CLOSE BUTTON */}
+                            <button
+                                type="button"
+                                onClick={onClose}
+                                aria-label="Lukk"
+                                className="absolute right-4 top-4 z-50 flex h-9 w-9 items-center justify-center rounded-full text-[#9A8C93] transition-colors hover:bg-[#FAF3F6] hover:text-[#1A1218] sm:right-5 sm:top-5"
+                            >
+                                <X size={18} />
+                            </button>
 
-                        <div className="flex justify-center">
-                            <Image
-                                src="/images/betalia_logo.png"
-                                alt="Betalia"
-                                width={132}
-                                height={37}
-                                className="h-[37px] w-auto"
-                            />
-                        </div>
-
-                        <h1 className="mt-[40px] text-[28px] font-semibold leading-[1.2] tracking-[-0.6px] text-[#1A1218]">
-                            La oss hjelpe deg i gang
-                        </h1>
-
-                        <p className="mt-3 max-w-[760px] text-[15px] leading-[1.6] text-[#6E6168]">
-                            La oss vise deg hvorfor stadig flere bedrifter velger Betalia og hvor enkelt det er å effektivisere driften og skape vekst.
-                        </p>
-
-                        <div className="mt-[36px] space-y-5">
-                            <div className="grid gap-5 md:grid-cols-2">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                    placeholder="Fornavn*"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    className={`${FIELD} h-[56px]`}
-                                />
-
-                                <input
-                                    type="text"
-                                    name="surname"
-                                    required
-                                    placeholder="Etternavn*"
-                                    value={formData.surname}
-                                    onChange={handleChange}
-                                    className={`${FIELD} h-[56px]`}
+                            <div className="flex justify-center">
+                                <Image
+                                    src="/images/betalia_logo_burgundy.png"
+                                    alt="Betalia"
+                                    width={132}
+                                    height={37}
+                                    className="h-[30px] w-auto sm:h-[37px]"
                                 />
                             </div>
 
-                            <input
-                                type="text"
-                                name="companyName"
-                                required
-                                placeholder="Firmanavn*"
-                                value={formData.companyName}
-                                onChange={handleChange}
-                                className={`${FIELD} h-[56px]`}
-                            />
+                                <h1 className="mt-6 text-[22px] font-semibold leading-[1.2] tracking-[-0.6px] text-[#1A1218] sm:mt-8 sm:text-[26px] md:mt-[40px] md:text-[28px]">
+                                    La oss hjelpe deg i gang
+                                </h1>
 
-                            <div className="grid gap-5 md:grid-cols-2">
-                                <input
-                                    type="text"
-                                    name="companyOrg"
-                                    placeholder="Organisasjons nr"
-                                    value={formData.companyOrg}
-                                    onChange={handleChange}
-                                    className={`${FIELD} h-[56px]`}
-                                />
+                                    <p className="mt-2.5 max-w-[760px] text-[14px] leading-[1.6] text-[#6E6168] sm:mt-3 sm:text-[15px]">
+                                        La oss vise deg hvorfor stadig flere bedrifter velger Betalia og hvor enkelt det er å effektivisere driften og skape vekst.
+                                    </p>
 
-                                <input
-                                    type="text"
-                                    name="position"
-                                    placeholder="Stilling"
-                                    value={formData.position}
-                                    onChange={handleChange}
-                                    className={`${FIELD} h-[56px]`}
-                                />
-                            </div>
+                                            <div className="mt-6 space-y-4 sm:mt-[36px] sm:space-y-5">
+                                                <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
+                                                    <input
+                                                        type="text"
+                                                        name="name"
+                                                        required
+                                                        placeholder="Fornavn*"
+                                                        value={formData.name}
+                                                        onChange={handleChange}
+                                                        className={`${FIELD} h-[48px] sm:h-[56px]`}
+                                                    />
 
-                            <div className="grid gap-5 md:grid-cols-2">
-                                <input
-                                    type="text"
-                                    name="phone"
-                                    placeholder="Telefon"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    className={`${FIELD} h-[56px]`}
-                                />
+                                                    <input
+                                                        type="text"
+                                                        name="surname"
+                                                        required
+                                                        placeholder="Etternavn*"
+                                                        value={formData.surname}
+                                                        onChange={handleChange}
+                                                        className={`${FIELD} h-[48px] sm:h-[56px]`}
+                                                    />
+                                                </div>
 
-                                <input
-                                    type="email"
-                                    name="email"
-                                    required
-                                    placeholder="E-post*"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className={`${FIELD} h-[56px]`}
-                                />
-                            </div>
+                                                <input
+                                                    type="text"
+                                                    name="companyName"
+                                                    required
+                                                    placeholder="Firmanavn*"
+                                                    value={formData.companyName}
+                                                    onChange={handleChange}
+                                                    className={`${FIELD} h-[48px] sm:h-[56px]`}
+                                                />
 
-                            <textarea
-                                rows={6}
-                                name="message"
-                                placeholder="Fortell gjerne mer om deres selskap"
-                                value={formData.message}
-                                onChange={handleChange}
-                                className={`${FIELD} resize-none py-4`}
-                            />
+                                                    <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
+                                                        <input
+                                                            type="text"
+                                                            name="companyOrg"
+                                                            placeholder="Organisasjons nr"
+                                                            value={formData.companyOrg}
+                                                            onChange={handleChange}
+                                                            className={`${FIELD} h-[48px] sm:h-[56px]`}
+                                                        />
 
-                            <label className="flex cursor-pointer items-start gap-3 pt-1">
-                                <input
-                                    type="checkbox"
-                                    name="consent"
-                                    checked={formData.consent}
-                                    onChange={handleChange}
-                                    className="sr-only"
-                                />
-                                <ShieldCheck
-                                    size={16}
-                                    className="mt-[2px] shrink-0 text-[#AE4D70]"
-                                />
-                                <span className="text-[12.5px] leading-[1.55] text-[#6E6168]">
-                                    Jeg samtykker til at Betalia kan kontakte meg angående min forespørsel. Jeg bekrefter at jeg har signaturrett på vegne av virksomheten. Jeg godtar at opplysningene jeg sender inn kan lagres og behandles så lenge det er nødvendig for å behandle henvendelsen og følge opp saken.
-                                </span>
-                            </label>
-                        </div>
-                    </div>
+                                                        <input
+                                                            type="text"
+                                                            name="position"
+                                                            placeholder="Stilling"
+                                                            value={formData.position}
+                                                            onChange={handleChange}
+                                                            className={`${FIELD} h-[48px] sm:h-[56px]`}
+                                                        />
+                                                    </div>
 
-                    <button
-                        type="submit"
-                        className="mt-3 h-[51px] w-[213px] rounded-[4px] bg-[#AE4D70] text-[15px] font-semibold text-white shadow-lg transition-opacity hover:opacity-90"
-                    >
-                        Send forespørsel
-                    </button>
-                </form>
-            </div>
-        </div>
-    );
+                                                        <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
+                                                            <input
+                                                                type="text"
+                                                                name="phone"
+                                                                placeholder="Telefon"
+                                                                value={formData.phone}
+                                                                onChange={handleChange}
+                                                                className={`${FIELD} h-[48px] sm:h-[56px]`}
+                                                            />
+
+                                                            <input
+                                                                type="email"
+                                                                name="email"
+                                                                required
+                                                                placeholder="E-post*"
+                                                                value={formData.email}
+                                                                onChange={handleChange}
+                                                                className={`${FIELD} h-[48px] sm:h-[56px]`}
+                                                            />
+                                                        </div>
+
+                                                        <textarea
+                                                            rows={5}
+                                                            name="message"
+                                                            placeholder="Fortell gjerne mer om deres selskap"
+                                                            value={formData.message}
+                                                            onChange={handleChange}
+                                                            className={`${FIELD} resize-none py-3.5 sm:py-4`}
+                                                        />
+
+                                                        <label className="flex cursor-pointer items-start gap-3 pt-1">
+                                                            <input
+                                                                type="checkbox"
+                                                                name="consent"
+                                                                checked={formData.consent}
+                                                                onChange={handleChange}
+                                                                className="sr-only"
+                                                            />
+                                                            <ShieldCheck
+                                                                size={16}
+                                                                className="mt-[2px] shrink-0 text-[#AE4D70]"
+                                                            />
+                                                                <span className="text-[12px] leading-[1.55] text-[#6E6168] sm:text-[12.5px]">
+                                                                    Jeg samtykker til at Betalia kan kontakte meg angående min forespørsel. Jeg bekrefter at jeg har signaturrett på vegne av virksomheten. Jeg godtar at opplysningene jeg sender inn kan lagres og behandles så lenge det er nødvendig for å behandle henvendelsen og følge opp saken.
+                                                                </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <button
+                                                    type="submit"
+                                                    className="mt-3 h-[48px] w-full rounded-[4px] bg-[#AE4D70] text-[15px] font-semibold text-white shadow-lg transition-opacity hover:opacity-90 sm:h-[51px] sm:w-[213px]"
+                                                >
+                                                    Send forespørsel
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    );
 }

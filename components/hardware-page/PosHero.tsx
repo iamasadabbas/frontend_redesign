@@ -18,10 +18,10 @@ export default function PosHero() {
   const { openModal } = useRegistrationModal();
 
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto max-w-[1280px] border-x border-[#EEE3E8] bg-white px-5 pb-[88px] pt-[64px] sm:px-8 lg:px-[32px]">
-        <div className="flex flex-col items-center gap-10 lg:flex-row">
-          <div className="max-w-[580px]">
+        <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between">
+          <div className="w-full max-w-[580px] lg:flex-1">
             <span className="inline-flex items-center gap-2 rounded-[6px] border border-[#EEE3E8] bg-white px-3 py-2">
               <span className="h-[6px] w-[6px] rounded-full bg-[#AE4D70]" />
               <span
@@ -61,7 +61,7 @@ export default function PosHero() {
             </div>
           </div>
 
-          <HeroVisualBox className="lg:h-[500px] lg:w-[580px]">
+          <HeroVisualBox className="lg:h-[440px] lg:w-[450px] xl:h-[500px] xl:w-[580px]">
             <Image
               src="/images/pos/hero-terminal.png"
               alt="Betalia POS-terminal sett bakfra"

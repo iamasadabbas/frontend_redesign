@@ -7,7 +7,7 @@ import type { ReactNode } from "react";
  */
 export default function HeroVisualBox({
   children,
-  className = "lg:h-[500px] lg:w-[560px]",
+  className = "lg:h-[440px] lg:w-[440px] xl:h-[500px] xl:w-[560px]",
   showGlow = true,
 }: {
   children: ReactNode;
@@ -16,7 +16,7 @@ export default function HeroVisualBox({
 }) {
   return (
     <div
-      className={`relative ml-auto flex w-full max-w-[580px] shrink-0 items-center justify-center border border-[#EEE3E8] bg-white p-6 sm:p-10 ${className}`}
+      className={`relative mx-auto flex w-full max-w-[580px] shrink-0 items-center justify-center border border-[#EEE3E8] bg-white p-6 sm:p-10 lg:ml-auto lg:mr-0 ${className}`}
     >
       <div
         className="pointer-events-none absolute inset-0"
@@ -59,7 +59,7 @@ export default function HeroVisualBox({
       >
         +
       </span>
-      <div className="relative z-10 flex h-full w-full items-center justify-center">
+      <div className="relative z-10 flex w-full items-center justify-center lg:h-full">
         {children}
       </div>
     </div>

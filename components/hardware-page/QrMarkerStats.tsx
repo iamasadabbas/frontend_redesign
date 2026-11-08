@@ -15,7 +15,7 @@ const stats: [string, string][] = [
 
 export default function QrMarkerStats() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
         <div className="mx-auto max-w-[1280px] border-x border-[#EEE3E8] bg-[#FBF6F8] px-5 pb-[64px] pt-[64px] sm:px-8 lg:px-[32px]">
           <h2
             className={`text-center text-[32px] font-semibold leading-[1.15] tracking-[-1px] text-[#1A1218] sm:text-[36px] lg:text-[40px] ${SANS}`}

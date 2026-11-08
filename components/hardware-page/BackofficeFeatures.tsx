@@ -34,7 +34,7 @@ const cells = [
 
 export default function BackofficeFeatures() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
         <div className="mx-auto max-w-[1280px] border-x border-[#EEE3E8] bg-[#FBF6F8] px-5 pb-[104px] pt-[88px] sm:px-8 lg:px-[32px]">
           <p
             className={`text-[12px] uppercase leading-none tracking-[1.2px] text-[#AE4D70] ${MONO}`}

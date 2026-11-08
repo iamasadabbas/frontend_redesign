@@ -1,36 +1,29 @@
 export const faqs = [
   {
     id: 1,
-    question: "How quickly will someone contact me?",
+    question: "Hvor raskt blir jeg kontaktet?",
     answer:
-      "Our team typically responds within one business day. For urgent requests, we aim to get back to you even sooner.",
+      "Når rutineoppgavene automatiseres, får du mer tid til å utvikle virksomheten, styrke kundeforholdene og øke salget. Betalias mål er å være den foretrukne POS- og betalingsplattformen for norske virksomheter som ønsker en enklere, smartere og mer lønnsom hverdag.",
   },
 
   {
     id: 2,
-    question: "Can I schedule a demo?",
+    question: "Kan jeg bestille en demo?",
     answer:
-      "Absolutely. We can walk you through the platform and show how Betalia fits your restaurant's workflow.",
+      "Ja, absolutt. Vi viser deg gjerne plattformen og hvordan Betalia kan tilpasses arbeidsflyten i din restaurant, kafé eller kjede.",
   },
 
   {
     id: 3,
-    question: "Do you offer onboarding support?",
+    question: "Tilbyr dere onboarding-støtte?",
     answer:
-      "Yes. We help with setup, staff training, menu configuration, and migration from your existing system.",
+      "Ja. Vi hjelper deg med oppsett, opplæring av ansatte, menykonfigurasjon og overgang fra ditt eksisterende system.",
   },
 
   {
     id: 4,
-    question: "Can Betalia support multiple locations?",
+    question: "Tilbyr dere maskinvare?",
     answer:
-      "Yes. Betalia is built to support single restaurants as well as multi-location operations from one dashboard.",
-  },
-
-  {
-    id: 5,
-    question: "Do you provide hardware?",
-    answer:
-      "Yes. We offer a range of hardware options including terminals, handhelds, kiosks, and self-service solutions.",
+      "Ja. Vi leverer komplett maskinvare inkludert kasser, betalingsterminaler, kjøkkenskjermer, kundedisplay og selvbetjeningskiosker.",
   },
 ];

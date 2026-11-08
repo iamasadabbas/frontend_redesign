@@ -18,7 +18,7 @@ const specs: [string, string][] = [
 
 export default function KsdSpecs() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto max-w-[1280px] px-5 pb-[104px] pt-[96px] sm:px-8 lg:px-[32px]">
         <div className="grid grid-cols-1 gap-[48px] lg:grid-cols-[400px_1fr] lg:gap-[64px]">
           <div>
@@ -34,27 +34,27 @@ export default function KsdSpecs() {
             </h2>
           </div>
 
-          <div className="border border-[#EEE3E8] bg-white px-[28px] py-[6px]">
+          <div className="border border-[#EEE3E8] bg-white px-5 py-[6px] sm:px-[28px]">
             {specs.map(([label, value], i) => (
               <div
                 key={label}
-                className={`flex items-center py-[24px] ${
+                className={`flex flex-col items-start gap-2 py-[18px] sm:flex-row sm:items-center sm:gap-4 sm:py-[24px] ${
                   i > 0 ? "border-t border-[#EEE3E8]" : ""
                 }`}
               >
                 <span
-                  className={`w-[38%] shrink-0 text-[11px] uppercase leading-none tracking-[2px] text-[#AE4D70] ${MONO}`}
+                  className={`w-full text-[11px] uppercase leading-snug tracking-[2px] text-[#AE4D70] sm:w-[40%] sm:shrink-0 sm:leading-none ${MONO}`}
                 >
-                  { label }
+                  {label}
                 </span>
-            <span
-              className={`text-[15px] font-medium leading-[1.5] text-[#1A1218] ${SANS}`}
-            >
-              — {value}
-            </span>
-          </div>
+                <span
+                  className={`text-[15px] font-medium leading-[1.5] text-[#1A1218] ${SANS}`}
+                >
+                  — {value}
+                </span>
+              </div>
             ))}
-        </div>
+          </div>
       </div>
     </div>
     </section >

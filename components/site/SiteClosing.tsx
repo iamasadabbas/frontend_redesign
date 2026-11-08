@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,6 +14,7 @@ import {
   Twitter,
 } from "lucide-react";
 import { useRegistrationModal } from "@/hooks/useRegistrationModal";
+import LegalModal, { type LegalTab } from "./LegalModal";
 
 const MONO = "[font-family:var(--font-home-mono)]";
 const SANS = "[font-family:var(--font-home-sans)]";
@@ -33,7 +35,7 @@ export function SiteCTA({
   const { openModal } = useRegistrationModal();
 
   return (
-    <section className="bg-[linear-gradient(90deg,#AE4D70_0%,#733A72_100%)] px-0 lg:px-[80px]">
+    <section className="bg-[linear-gradient(90deg,#AE4D70_0%,#733A72_100%)] px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto flex max-w-[1280px] flex-col items-start gap-[64px] border-x border-white/[0.149] px-5 py-[93px] sm:px-8 lg:flex-row lg:items-center lg:px-[32px]">
         <div className="max-w-[630px] flex-1">
           <p
@@ -106,8 +108,10 @@ const colLink = "text-[15px] leading-none text-white/70 hover:text-white";
 /** Concept footer — solid deep #2A1328, unnumbered mono column labels,
  *  KONTAKT column carries org number, street address and hei@betalia.no. */
 export function SiteFooter() {
+  const [legalTab, setLegalTab] = useState<LegalTab | null>(null);
+
   return (
-    <footer className="bg-[#2A1328] px-0 lg:px-[80px]">
+    <footer className="bg-[#2A1328] px-0 lg:px-8 xl:px-[80px]">
       <div className="mx-auto max-w-[1280px] border-x border-white/[0.0784] px-5 sm:px-8 lg:px-[32px]">
         {/* Columns */}
         <div className="grid grid-cols-1 gap-10 pb-[36px] pt-[48px] md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-[390px_288px_266px_1fr] xl:gap-0">
@@ -115,11 +119,11 @@ export function SiteFooter() {
           <div className="lg:pr-[48px]">
             <div className="flex items-start gap-[48px] xl:ml-[36px]">
               <Image
-                src="/images/betalia_vertical_logo.png"
+                src="/images/betalia_vertical_logo_burgundy.png"
                 alt="Betalia"
                 width={40}
                 height={143}
-                className="h-[124px] w-auto shrink-0 opacity-50"
+                className="h-[124px] w-auto shrink-0"
               />
               <p
                 className={`self-end pb-[4px] text-center text-[20px] font-medium leading-[1.4] text-white/30 ${SANS}`}
@@ -192,7 +196,7 @@ export function SiteFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex h-[63px] flex-wrap items-center justify-between gap-4 border-t border-white/[0.0784]">
+        <div className="flex min-h-[63px] flex-wrap items-center justify-between gap-4 border-t border-white/[0.0784] py-4">
           <p
             className={`text-[11px] uppercase leading-none tracking-[1.2px] text-white/50 ${MONO}`}
           >
@@ -201,12 +205,31 @@ export function SiteFooter() {
           <div
             className={`flex gap-8 text-[11px] uppercase leading-none tracking-[1.2px] text-white/50 ${MONO}`}
           >
-            <span>Personvern</span>
-            <span>Cookies</span>
-            <span>Betalia.no</span>
+            <button
+              type="button"
+              onClick={() => setLegalTab("personvern")}
+              className="uppercase transition-colors hover:text-white"
+            >
+              Personvern
+            </button>
+            <button
+              type="button"
+              onClick={() => setLegalTab("cookies")}
+              className="uppercase transition-colors hover:text-white"
+            >
+              Cookies
+            </button>
+            <Link href="/" className="transition-colors hover:text-white">
+              Betalia.no
+            </Link>
           </div>
         </div>
       </div>
+      <LegalModal
+        activeTab={legalTab}
+        onSelectTab={setLegalTab}
+        onClose={() => setLegalTab(null)}
+      />
     </footer>
   );
 }

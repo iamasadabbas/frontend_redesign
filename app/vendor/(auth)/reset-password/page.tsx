@@ -124,7 +124,7 @@ export default function ResetPasswordPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center mb-4">
-            <Image src="/images/betalia_logo.png" alt="Betalia Logo" width={160} height={160} />
+            <Image src="/images/betalia_logo_burgundy.png" alt="Betalia Logo" width={160} height={160} />
           </div>
         </div>
         <Suspense fallback={null}>

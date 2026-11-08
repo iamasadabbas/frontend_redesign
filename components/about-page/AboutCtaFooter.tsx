@@ -92,7 +92,7 @@ export default function AboutCtaFooter() {
         />
         {/* Vertical wordmark */}
         <Image
-          src="/images/betalia_vertical_logo.png"
+          src="/images/betalia_vertical_logo_burgundy.png"
           alt="Betalia"
           width={112}
           height={400}

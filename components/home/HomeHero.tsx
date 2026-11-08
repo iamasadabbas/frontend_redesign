@@ -21,10 +21,10 @@ export default function HomeHero() {
   const { openModal } = useRegistrationModal();
 
   return (
-    <section className="px-0 lg:px-[80px]">
-      <div className="mx-auto flex max-w-[1280px] flex-col border-x border-[#EEE3E8] bg-white px-5 py-14 sm:px-8 lg:h-[701px] lg:flex-row lg:items-center lg:gap-[56px] lg:px-[32px] lg:py-[88px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
+      <div className="mx-auto flex max-w-[1280px] flex-col border-x border-[#EEE3E8] bg-white px-5 py-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-[36px] lg:px-[32px] lg:py-[72px] xl:min-h-[701px] xl:gap-[56px] xl:py-[88px]">
         {/* Copy */}
-        <div className="flex w-full max-w-[578px] flex-col gap-[28px]">
+        <div className="flex w-full max-w-[578px] flex-col gap-[28px] lg:flex-1">
           {/* Eyebrow chip */}
           <div>
             <span className="inline-flex items-center gap-2 rounded-[6px] border border-[#EEE3E8] px-3 py-2">
@@ -70,7 +70,7 @@ export default function HomeHero() {
 
         {/* Visual — 580x500 frame: faint grid, pink glow, corner marks,
             exported hardware image + 4-tag strip at bottom */}
-        <div className="relative mt-10 flex w-full flex-col items-center justify-between border border-[#EEE3E8] pt-8 md:mt-14 md:h-[500px] md:w-[580px] md:shrink-0 md:pt-0 lg:mt-0">
+        <div className="relative mx-auto mt-10 flex w-full max-w-[580px] flex-col items-center justify-between border border-[#EEE3E8] pt-8 md:mt-14 md:h-[500px] md:pt-0 lg:mx-0 lg:mt-0 lg:w-[450px] lg:shrink-0 xl:w-[580px]">
           <div
             className="pointer-events-none absolute inset-0"
             style={{

@@ -28,14 +28,16 @@ const stats = [
  *  (tint inner, seven brand wordmarks, grey #9A8C93). */
 export function HomeStats() {
   return (
-    <section className="px-0 lg:px-[80px]">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 border-x border-t border-[#EEE3E8] bg-white sm:grid-cols-2 lg:h-[184px] lg:grid-cols-4">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-1 border-x border-t border-[#EEE3E8] bg-white sm:grid-cols-2 lg:min-h-[184px] lg:grid-cols-4">
         {stats.map((s, i) => (
           <div
             key={s.label}
-            className={`flex flex-col px-[32px] py-8 lg:justify-start lg:py-0 lg:pt-[35px] ${
-              i > 0 ? "border-t border-[#EEE3E8] sm:border-l lg:border-t-0" : ""
-            }`}
+            className={`flex flex-col px-6 py-8 lg:justify-start lg:px-[24px] lg:py-[32px] xl:px-[32px] xl:pt-[35px] ${
+              i > 0 ? "border-t border-[#EEE3E8]" : ""
+            } ${i === 1 ? "sm:border-t-0" : ""} ${
+              i % 2 === 1 ? "sm:border-l" : ""
+            } ${i > 0 ? "lg:border-l lg:border-t-0" : ""}`}
           >
             <p
               className={`flex items-center justify-between text-[12px] uppercase leading-none tracking-[1.2px] text-[#6E6168] ${MONO}`}
@@ -43,7 +45,7 @@ export function HomeStats() {
               {s.label}
               {s.label === "Support" && <span aria-hidden>−</span>}
             </p>
-            <p className={`mt-[22px] text-[48px] font-semibold leading-none tracking-[-1.5px] text-[#1A1218] ${SANS}`}>
+            <p className={`mt-[22px] whitespace-nowrap text-[36px] font-semibold leading-none tracking-[-1.5px] text-[#1A1218] xl:text-[48px] ${SANS}`}>
               {s.value}
             </p>
             {s.desc && (
@@ -60,19 +62,18 @@ export function HomeStats() {
 
 export function HomePayments() {
   return (
-    <section className="px-0 lg:px-[80px]">
+    <section className="px-0 lg:px-8 xl:px-[80px]">
       <div
         className={`mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-x-[40px] gap-y-5 border-x border-t border-[#EEE3E8] bg-[#FBF6F8] px-[32px] py-[34px] text-[#8F8088] ${SANS}`}
       >
         {/* Vipps */}
         <span className="inline-flex items-center text-[22px] font-bold lowercase tracking-[-0.6px]">
           v
-          <span className="relative mx-[1px] inline-block">
-            <span className="opacity-0">i</span>
+          <span className="relative mx-[1px] inline-block h-[18px] w-[12px]">
             <svg
               aria-hidden
               viewBox="0 0 14 14"
-              className="absolute inset-x-0 bottom-[3px] h-[12px] w-[12px]"
+              className="absolute inset-x-0 bottom-[1px] h-[12px] w-[12px]"
               fill="none"
             >
               <circle cx="9.5" cy="3" r="1.5" fill="currentColor" />
