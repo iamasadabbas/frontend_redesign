@@ -602,7 +602,7 @@ export default function LegalModal({
         className="relative flex max-h-[92vh] max-h-[92dvh] w-full max-w-[920px] flex-col overflow-hidden rounded-[8px] border border-[#EEE3E8] bg-white shadow-2xl sm:max-h-[88vh] sm:max-h-[88dvh]"
       >
         {/* Top Header */}
-            <div className="shrink-0 border-b border-[#EEE3E8] bg-[#FBF6F8] px-4 pb-3.5 pt-4 sm:px-6 sm:pb-4 sm:pt-5 md:px-8 md:pb-5 md:pt-6">
+        <div className="shrink-0 border-b border-[#EEE3E8] bg-[#FBF6F8] px-4 pb-3.5 pt-4 sm:px-6 sm:pb-4 sm:pt-5 md:px-8 md:pb-5 md:pt-6">
               <div className="flex items-center justify-between gap-3">
                 <Image
                   src="/images/betalia_logo_burgundy.png"
@@ -622,161 +622,163 @@ export default function LegalModal({
               </div>
 
               {/* Tab Switcher + Title */}
-                    <div className="mt-3 flex flex-col gap-3 sm:mt-4 md:mt-5 md:flex-row md:items-end md:justify-between md:gap-4">
-                      <div className="min-w-0">
-                        <span className="inline-flex max-w-full items-center gap-2 rounded-[6px] border border-[#EEE3E8] bg-white px-2.5 py-1 sm:px-3 sm:py-1.5">
-                          <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-[#AE4D70]" />
-                          <span
-                            className={`truncate text-[9.5px] uppercase leading-none tracking-[1.4px] text-[#AE4D70] sm:text-[10px] sm:tracking-[2.4px] ${MONO}`}
-                          >
-                            Sist oppdatert: 7. november 2026
-                          </span>
-                        </span>
-                        <h2
-                          className={`mt-2 break-words text-[20px] font-semibold leading-[1.18] tracking-[-0.5px] text-[#1A1218] sm:mt-2.5 sm:text-[26px] md:text-[30px] md:tracking-[-0.8px] ${SANS}`}
-                        >
-                          {isPersonvern
-                            ? "Personvernerklæring for Betalia"
-                            : "Informasjonskapsler (Cookies)"}
-                        </h2>
-                      </div>
-
-                        <div className="grid w-full shrink-0 grid-cols-2 rounded-[6px] border border-[#EEE3E8] bg-white p-1 sm:inline-flex sm:w-auto">
-                          <button
-                            type="button"
-                            onClick={() => onSelectTab("personvern")}
-                                  ? "bg-[#AE4D70] text-white"
-                                  : "text-[#6E6168] hover:text-[#1A1218]"
-                                }`}
-              >
-                <ShieldCheck size={14} className="shrink-0" />
-                <span>Personvern</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => onSelectTab("cookies")}
-                            className = {`flex items-center justify-center gap-2 rounded-[4px] px-3 py-2 text-[12.5px] font-semibold leading-none transition-colors sm:px-3.5 sm:text-[13px] ${SANS} ${!isPersonvern
-                                ? "bg-[#AE4D70] text-white"
-                                : "text-[#6E6168] hover:text-[#1A1218]"
-                              }`}
-              >
-                          <Cookie size={14} className="shrink-0" />
-                          <span>Cookies</span>
-                        </button>
-                      </div>
-                    </div>
-                </div>
-
-                {/* Scrollable Content */}
-                    <div
-                      ref={scrollContainerRef}
-                      className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3.5 py-4 [-webkit-overflow-scrolling:touch] sm:px-6 sm:py-6 md:px-8 md:py-7"
+              <div className="mt-3 flex flex-col gap-3 sm:mt-4 md:mt-5 md:flex-row md:items-end md:justify-between md:gap-4">
+                <div className="min-w-0">
+                  <span className="inline-flex max-w-full items-center gap-2 rounded-[6px] border border-[#EEE3E8] bg-white px-2.5 py-1 sm:px-3 sm:py-1.5">
+                    <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-[#AE4D70]" />
+                    <span
+                      className={`truncate text-[9.5px] uppercase leading-none tracking-[1.4px] text-[#AE4D70] sm:text-[10px] sm:tracking-[2.4px] ${MONO}`}
                     >
-                      <div className="space-y-3 sm:space-y-4">
-                        {sections.map((section) => (
-                          <section
-                            key={section.num}
-                            className="rounded-[6px] border border-[#EEE3E8] bg-white p-4 transition-colors hover:border-[#DDA6BE] sm:p-5 md:p-6"
-                          >
-                              <div className="flex items-start gap-2.5 sm:items-baseline sm:gap-3">
-                                <span
-                                  className={`mt-[2px] shrink-0 rounded-[4px] bg-[#FBF6F8] px-2 py-1 text-[10.5px] font-medium leading-none tracking-[1.2px] text-[#AE4D70] sm:mt-0 sm:text-[11px] ${MONO}`}
-                                >
-                                  {section.num}
-                                </span>
-                                <h3
-                                  className={`min-w-0 break-words text-[16px] font-semibold leading-[1.3] tracking-[-0.3px] text-[#1A1218] sm:text-[18px] md:text-[20px] ${SANS}`}
-                                >
-                                  {section.title}
-                                </h3>
-                              </div>
+                Sist oppdatert: 7. november 2026
+              </span>
+            </span>
+            <h2
+              className={`mt-2 break-words text-[20px] font-semibold leading-[1.18] tracking-[-0.5px] text-[#1A1218] sm:mt-2.5 sm:text-[26px] md:text-[30px] md:tracking-[-0.8px] ${SANS}`}
+            >
+              {isPersonvern
+                ? "Personvernerklæring for Betalia"
+                : "Informasjonskapsler (Cookies)"}
+            </h2>
+          </div>
 
-                                <div className="mt-3 space-y-2.5 break-words text-[13.5px] leading-[1.65] text-[#6E6168] sm:mt-4 sm:space-y-3 sm:text-[14.5px]">
-                                  {section.blocks.map((block, idx) => {
-                                    if (block.type === "p") {
-                                      return <p key={idx}>{block.text}</p>;
-                                    }
-                                    if (block.type === "subheading") {
-                                      return (
-                                        <h4
-                                          key={idx}
-                                          className={`pt-1.5 text-[14px] font-semibold text-[#1A1218] sm:pt-2 sm:text-[15px] ${SANS}`}
-                                        >
-                                          {block.text}
-                                        </h4>
-                                      );
-                                    }
-                                    if (block.type === "list") {
-                                      return (
-                                          <ul key={idx} className="space-y-1.5 pl-0.5 sm:pl-1">
-                                            {block.items.map((item, i) => (
-                                                <li key={i} className="flex items-start gap-2 sm:gap-2.5">
-                                                  <span className="mt-[2px] shrink-0 text-[#AE4D70]">
-                                                    —
-                                                  </span>
-                                                    <span className="min-w-0 break-words">
-                                                      {item.bold && (
-                                                        <strong className="font-semibold text-[#1A1218]">
-                                                          {item.bold}{" "}
-                                                        </strong>
-                                                      )}
-                                                      {item.text}
-                                                    </span>
-                                                </li>
-                          ))}
-                                              </ul>
-                                            );
+              <div className="grid w-full shrink-0 grid-cols-2 rounded-[6px] border border-[#EEE3E8] bg-white p-1 sm:inline-flex sm:w-auto">
+                <button
+                  type="button"
+                  onClick={() => onSelectTab("personvern")}
+                  className={`flex items-center justify-center gap-2 rounded-[4px] px-3 py-2 text-[12.5px] font-semibold leading-none transition-colors sm:px-3.5 sm:text-[13px] ${SANS} ${isPersonvern
+                      ? "bg-[#AE4D70] text-white"
+                      : "text-[#6E6168] hover:text-[#1A1218]"
+                    }`}
+                >
+                  <ShieldCheck size={14} className="shrink-0" />
+                  <span>Personvern</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onSelectTab("cookies")}
+                  className={`flex items-center justify-center gap-2 rounded-[4px] px-3 py-2 text-[12.5px] font-semibold leading-none transition-colors sm:px-3.5 sm:text-[13px] ${SANS} ${!isPersonvern
+                      ? "bg-[#AE4D70] text-white"
+                      : "text-[#6E6168] hover:text-[#1A1218]"
+                    }`}
+                >
+            <Cookie size={14} className="shrink-0" />
+            <span>Cookies</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+        {/* Scrollable Content */ }
+  <div
+    ref={scrollContainerRef}
+    className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3.5 py-4 [-webkit-overflow-scrolling:touch] sm:px-6 sm:py-6 md:px-8 md:py-7"
+  >
+    <div className="space-y-3 sm:space-y-4">
+      {sections.map((section) => (
+        <section
+          key={section.num}
+          className="rounded-[6px] border border-[#EEE3E8] bg-white p-4 transition-colors hover:border-[#DDA6BE] sm:p-5 md:p-6"
+        >
+          <div className="flex items-start gap-2.5 sm:items-baseline sm:gap-3">
+            <span
+              className={`mt-[2px] shrink-0 rounded-[4px] bg-[#FBF6F8] px-2 py-1 text-[10.5px] font-medium leading-none tracking-[1.2px] text-[#AE4D70] sm:mt-0 sm:text-[11px] ${MONO}`}
+            >
+              {section.num}
+            </span>
+            <h3
+              className={`min-w-0 break-words text-[16px] font-semibold leading-[1.3] tracking-[-0.3px] text-[#1A1218] sm:text-[18px] md:text-[20px] ${SANS}`}
+            >
+              {section.title}
+            </h3>
+          </div>
+
+                <div className="mt-3 space-y-2.5 break-words text-[13.5px] leading-[1.65] text-[#6E6168] sm:mt-4 sm:space-y-3 sm:text-[14.5px]">
+                  {section.blocks.map((block, idx) => {
+                    if (block.type === "p") {
+                      return <p key={idx}>{block.text}</p>;
                     }
-                                            if (block.type === "info") {
+                    if (block.type === "subheading") {
                       return (
-                                            <div
-                                              key={idx}
-                                              className="my-2.5 rounded-[6px] border border-[#EEE3E8] bg-[#FBF6F8] px-3.5 py-1.5 sm:my-3 sm:px-4 sm:py-2"
-                                            >
-                                              {block.rows.map(([label, val], rIdx) => (
-                                                <div
-                                                  key={label}
-                                                      }`}
-                            >
-                              <span
-                                              className={`w-full text-[10.5px] uppercase leading-none tracking-[1.4px] text-[#AE4D70] sm:w-[190px] sm:shrink-0 sm:text-[11px] sm:tracking-[1.5px] md:w-[210px] ${MONO}`}
-                              >
-                                              {label}
-                                            </span>
-                                              <span className="min-w-0 break-words text-[13.5px] font-medium text-[#1A1218] sm:text-[14px]">
-                                                {val}
-                                              </span>
-                                            </div>
-                          ))}
-                                          </div>
-                                          );
+                        <h4
+                          key={idx}
+                          className={`pt-1.5 text-[14px] font-semibold text-[#1A1218] sm:pt-2 sm:text-[15px] ${SANS}`}
+                        >
+                          {block.text}
+                        </h4>
+                      );
                     }
-                                          return null;
-                  })}
-                                        </div>
-              </section>
-            ))}
-                              </div>
-                            </div>
-
-                            {/* Bottom Bar */}
-                                <div className="flex shrink-0 items-center justify-between gap-3 border-t border-[#EEE3E8] bg-[#FBF6F8] px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4">
-                                  <p className="flex min-w-0 items-center gap-2 text-[11.5px] leading-[1.35] text-[#6E6168] sm:text-[13px]">
-                                    <ShieldCheck size={15} className="shrink-0 text-[#AE4D70]" />
-                                    <span className="truncate sm:whitespace-normal">
-                                      © 2026 Betalia. Alle rettigheter forbeholdt.
-                                    </span>
-                                  </p>
-                                  <button
-                                    type="button"
-                                    onClick={onClose}
-                                    className={`shrink-0 rounded-[6px] bg-[#AE4D70] px-4 py-2 text-[13px] font-semibold leading-none text-white transition-opacity hover:opacity-90 sm:px-6 sm:py-2.5 sm:text-[14px] ${SANS}`}
+                    if (block.type === "list") {
+                      return (
+                        <ul key={idx} className="space-y-1.5 pl-0.5 sm:pl-1">
+                          {block.items.map((item, i) => (
+                            <li key={i} className="flex items-start gap-2 sm:gap-2.5">
+                              <span className="mt-[2px] shrink-0 text-[#AE4D70]">
+                                —
+                              </span>
+                              <span className="min-w-0 break-words">
+                                {item.bold && (
+                                  <strong className="font-semibold text-[#1A1218]">
+                                    {item.bold}{" "}
+                                  </strong>
+                                )}
+                                {item.text}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                            );
+                    }
+                    if (block.type === "info") {
+                      return (
+                              <div
+                                key={idx}
+                                className="my-2.5 rounded-[6px] border border-[#EEE3E8] bg-[#FBF6F8] px-3.5 py-1.5 sm:my-3 sm:px-4 sm:py-2"
+                              >
+                                {block.rows.map(([label, val], rIdx) => (
+                                  <div
+                                    key={label}
+                                    className={`flex flex-col gap-1 py-2 sm:flex-row sm:items-baseline sm:gap-4 sm:py-2.5 ${rIdx > 0 ? "border-t border-[#EEE3E8]" : ""
+                                      }`}
                                   >
-                                    Lukk vindu
-                                  </button>
-                                </div>
+                                    <span
+                                      className={`w-full text-[10.5px] uppercase leading-none tracking-[1.4px] text-[#AE4D70] sm:w-[190px] sm:shrink-0 sm:text-[11px] sm:tracking-[1.5px] md:w-[210px] ${MONO}`}
+                                    >
+                                { label }
+                              </span>
+                              <span className="min-w-0 break-words text-[13.5px] font-medium text-[#1A1218] sm:text-[14px]">
+                                {val}
+                              </span>
                             </div>
-                          </div>
-                        );
+                          ))}
+                        </div>
+                  );
+                    }
+                  return null;
+                  })}
+                </div>
+        </section>
+      ))}
+          </div >
+        </div >
+
+  {/* Bottom Bar */ }
+  <div className="flex shrink-0 items-center justify-between gap-3 border-t border-[#EEE3E8] bg-[#FBF6F8] px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4">
+    <p className="flex min-w-0 items-center gap-2 text-[11.5px] leading-[1.35] text-[#6E6168] sm:text-[13px]">
+      <ShieldCheck size={15} className="shrink-0 text-[#AE4D70]" />
+      <span className="truncate sm:whitespace-normal">
+        © 2026 Betalia. Alle rettigheter forbeholdt.
+      </span>
+    </p>
+    <button
+      type="button"
+      onClick={onClose}
+      className={`shrink-0 rounded-[6px] bg-[#AE4D70] px-4 py-2 text-[13px] font-semibold leading-none text-white transition-opacity hover:opacity-90 sm:px-6 sm:py-2.5 sm:text-[14px] ${SANS}`}
+    >
+      Lukk vindu
+    </button>
+  </div>
+      </div >
+    </div >
+  );
 }
 
